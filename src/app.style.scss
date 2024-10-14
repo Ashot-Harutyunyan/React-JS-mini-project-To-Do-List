@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+.title {
+    width: max-content;
+    margin: 0 auto;
+}
+
+.to-do-list {
+    margin: 50px auto;
+    form {
+        width: 450px;
+        display: grid;
+        grid-template-columns: 280px 150px;
+        grid-template-rows: 35px 100px;
+        justify-content: center;       
+        .errorBlock, .errorNone {
+            position: relative;
+            width: max-content;
+            color: crimson;
+        }
+        input {
+            width: 100%;
+            height:100%;
+            border: 1px solid #213547;
+            padding-left: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            outline: 0;
+        }
+        button {
+            padding: 0px;
+            width: 150px;
+            border: none;
+            background-color: green;
+            color: white;
+            letter-spacing: 1px;
+            cursor: pointer;
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        .div-input {
+            width: 280px;
+            height: 35px;
+            .errorBlock {
+                transform: translateY(1px) translateX(2px);
+            }
+        }
+        .div-textarea {
+            grid-column: 1/3;
+            .errorBlock {
+                transform: translateY(-3px) translateX(2px);
+            }
+        }
+        textarea {
+            width: 100%;
+            height: 100%;
+            padding: 10px 0px 0px 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            outline: 0;
+        }
+        .errorBlock {
+            position: relative;
+            width: max-content;
+            color: crimson;
+            display: inline-block;
+        }
+        .errorNone {
+            position: relative;
+            width: max-content;
+            color: crimson;
+            display: none;
+        }
+    }
+}
+
+.container-add-task-list {
+    width: 445px;
+    margin: 10px auto;
+}
+
+.add-task-list {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0px;
+}
+
+.title-task-list, .description-task-list {
+    border: 1px solid #213547;
+    position: relative;
+    margin-top: 15px;
+    padding: 20px 10px 10px 10px;
+    min-height: 35px;
+    span {
+       position: absolute;
+       z-index: 1;
+       background-color: white;
+       color: #213547;
+       padding: 0px 5px;
+       top: 0;
+       transform: translateY(-12px);
+    }
+    p {
+        width: 100%;
+    }
+}
+
+.container-icon {
+    display: inline-block;
+    button {
+        display: block;
+        margin-top: 10px;
+        width: 140px;
+        height: 30px;
+        div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            span {
+                font-size: 15px;
+            }
+            .icon-completed {
+                font-size: 20px;
+                color: green;
+            }
+            .not {
+                color: crimson;
+            }
+        }
+    }
+    .icon-important, .icon-editing, .icon-remove{
+        margin: 0px 8px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .icon-editing {
+        color: #0e0ecc;
+    }
+    .icon-remove {
+        color: crimson;
+    }
+}
+
+.title-task-list {
+    width: 270px;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 10px;
+}
+
+.modalWindow {
+    position: absolute;
+    transform: translateX(-13px);
+    z-index: 2;
+    width: 450px;
+    height: 150px;
+    background-color: white;
+    border: 1px solid #cbcdcf;
+    box-shadow: 1px 1px 8px 2px #cbcdcf;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 20px;
+    div {
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+    button {
+        width: 50px;
+        padding: 4px 0px;
+        border-radius: 5px;
+        border: 1px solid black;
+        color: #213547;
+        cursor: pointer;
+    }
+    p {
+        color: #213547;
+        font-size: 18px;
+    }
+}
